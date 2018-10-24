@@ -12,9 +12,6 @@ let port = process.env.PORT || 3000
 
 app.use(bodyParser.json())
 
-
-app.listen(port)
-
 app.get('/employees', (req, res) => {
     Employee.find().then((employees) => {
         res.send({ employees })
