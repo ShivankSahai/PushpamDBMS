@@ -81,7 +81,7 @@ app.post('/salary', (req, res) => {
 
 app.post('/attendance',(req,res)=>{
     let attendance=new Attendance({
-        date=req.body.date,
+        date:req.body.date,
         enames:[]
     })
 
