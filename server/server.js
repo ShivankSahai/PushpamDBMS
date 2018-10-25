@@ -89,4 +89,16 @@ app.post('/attendance',(req,res)=>{
     })
 })
 
+app.delete('/employees/:eid', (req, res) => {
+    var eid = req.params.eid;
+
+    Employee.remove({eid})
+});
+
+app.delete('/salary/:eid',(req,res)=>{
+    var eid = req.params.eid;
+
+    Salary.remove({eid})
+})
+
 app.listen(port)
